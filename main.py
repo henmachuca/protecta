@@ -43,7 +43,6 @@ month_mapping = {
 # endregion
 
 
-# %%
 # region ---- Functions ----
 # Função para converter data ex: 'set-23' para '2023-09-01'
 def convert_to_datetime(periodo_str):
@@ -101,6 +100,19 @@ st.set_page_config(
     layout="wide",
     page_title="Comissões Protecta-Servopa | Consórcio",
 )
+
+# Aplicando a cor de fundo via CSS
+st.markdown(
+    """
+    <style>
+    body {
+        background-color: #FFFFFF;  # Altere para a cor desejada
+    }
+    </style>
+    """,
+    unsafe_allow_html=True,
+)
+
 # endregion
 
 
