@@ -279,12 +279,15 @@ final_chart_02 = (
 
 # endregion
 
-# Criando 2 colunas no Streamlit
-col1, col2 = st.columns(2)
+# # Criando 2 colunas no Streamlit
+# col1, col2 = st.columns(2)
 
-# Exibindo os gráficos nas colunas
-with col1:
-    st.altair_chart(final_chart_01, use_container_width=True)
+# # Exibindo os gráficos nas colunas
+# with col1:
+#     st.altair_chart(final_chart_01, use_container_width=True)
 
-with col2:
-    st.altair_chart(final_chart_02, use_container_width=True)
+# with col2:
+#     st.altair_chart(final_chart_02, use_container_width=True)
+
+st.altair_chart(final_chart_01, use_container_width=True)
+st.altair_chart(final_chart_02, use_container_width=True)
