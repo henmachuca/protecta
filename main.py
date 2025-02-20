@@ -168,7 +168,7 @@ df_melted = df_chart.melt(
 # Gráfico de barras
 chart_01 = (
     alt.Chart(df_melted)
-    .mark_bar(size=10)
+    .mark_bar(size=20)
     .encode(
         x=alt.X(
             "formatted_date:N",
@@ -179,7 +179,13 @@ chart_01 = (
         y=alt.Y("COMISSÃO TOTAL:Q", title="Comissão Total"),
         color=alt.Color(
             "SUBGRUPO:N",
-            legend=alt.Legend(title="Subgrupo"),
+            legend=alt.Legend(
+                title="Subgrupo",
+                orient="bottom",  # Mover a legenda para baixo
+                padding=10,  # Ajuste do espaçamento
+                titleFontSize=12,  # Tamanho da fonte do título da legenda
+                labelFontSize=10,  # Tamanho da fonte das legendas
+            ),
         ),
         tooltip=[
             alt.Tooltip("formatted_date:N", title="Data"),
@@ -242,7 +248,7 @@ final_chart_01 = (
 
 chart_02 = (
     alt.Chart(df_contagem_cpf)
-    .mark_bar()
+    .mark_bar(size=35)
     .encode(
         x=alt.X("Período:N", title="Período"),
         y=alt.Y("Contagem de CPFs:Q", title="Contagem de CPFs"),
